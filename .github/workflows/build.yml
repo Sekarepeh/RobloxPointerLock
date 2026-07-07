@@ -27,10 +27,10 @@ jobs:
         uses: gradle/gradle-build-action@v3
         with:
           gradle-version: 8.2
-          arguments: assembleRelease
+          arguments: assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: RobloxPointerLock-apk
-          path: app/build/outputs/apk/release/*.apk
+          path: app/build/outputs/apk/debug/*.apk
